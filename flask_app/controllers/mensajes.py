@@ -8,10 +8,12 @@ import time
 direccion = path.abspath(path.dirname(__file__))
 carpetas = direccion.split("\\")
 direccion = direccion[:(len(direccion)-len(carpetas[len(carpetas)-1])-1)]
+
 notificacion_base = Notify(
     # default_notification_icon=path.join(direccion, 'static\\img', "icono_notificacion.png"),
     # default_notification_audio=path.join(direccion, 'static\\audio', "notificacion.wav"),
 )
+
 
 def enviar_notificacion(titulo, mensaje):
     notificacion_base.title = titulo
