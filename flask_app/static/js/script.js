@@ -10,7 +10,7 @@ window.onload = function () {
 };
 
 function mensajes(){
-    fetch("http://127.0.0.1:5000/process")
+    fetch("/process")
     .then( response => response.json() )
     .then( data => console.log(data) )
 }s
