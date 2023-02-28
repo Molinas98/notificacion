@@ -10,7 +10,7 @@ window.onload = function () {
 };
 
 function mensajes(){
-    fetch("/process")
+    fetch("http://54.237.4.187/process")
     .then( response => response.json() )
     .then( data => console.log(data) )
 }s
