@@ -23,14 +23,16 @@ function notificacion(){
 
     var propiedades = {
         body: "Tienes un nuevo mensaje",
-         icon: "i.png"
+        icon: "static/img/icono_notificacion.png"
         //icon: "http://xitrus.es/imgs/logo_claro.png"
     }
 
     if(!("Notification" in window)){
         alert("El navegador no soporta notificaciones");
     }else if (Notification.permission === "granted"){
-        var notificacion = new Notification("Mi primera notificación", propiedades) 
+        console.log("Aca")
+        var notificacion = new Notification("Mi primera notificación", propiedades)
+        console.log("Ta")
 
         notificacion.onclick = (ev) => {
             ev.preventDefault()
